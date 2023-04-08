@@ -1,11 +1,13 @@
 import { NextPage } from 'next';
 import { Button } from '@mantine/core';
+import Header from '@/components/Header';
 
 
 const Home: NextPage = () => {
+
   return (
-    <div>
-      <Button color='cheese.0'>Привет</Button>
+    <div className='bg-[#FFFBF3]'>
+      <Header />
     </div>
   );
 };
