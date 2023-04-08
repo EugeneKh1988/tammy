@@ -56,7 +56,7 @@ const Header: React.FC = () => {
     ));
 
     return (
-      <MHeader height={60} className="border-none">
+      <MHeader height={60} className="border-none bg-[#FFFBF3]">
         <Container
           size={1440}
           pt={8}
