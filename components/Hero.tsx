@@ -1,9 +1,18 @@
-import { Button, Container, Grid, Title, rem, Text, Group } from "@mantine/core";
+import { faPlayCircle } from "@fortawesome/free-regular-svg-icons";
+import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
+import { Button, Container, Grid, Title, rem, Text, Group, Image } from "@mantine/core";
 import React from "react";
+
+// images
+import back from "@/public/background.png";
+import center from "@/public/center.png";
+import leftBottom from "@/public/leftBottom.svg";
+import leftTop from "@/public/leftTop.svg";
+import arrow from "@/public/arrow.svg";
 
 const Hero: React.FC = () => {
   return (
-    <Container size={1440} mt={80} className="xl:px-[100px]">
+    <Container size={1440} mt={80} className="xl:pl-[100px] pb-[180px]">
       <Grid>
         <Grid.Col md={6}>
           <Button
@@ -57,7 +66,52 @@ const Hero: React.FC = () => {
             >
               Get Started
             </Button>
+            <Button
+              variant="subtle"
+              c="onyx.0"
+              radius={8}
+              fz={17}
+              lh={rem(32)}
+              fw={500}
+              h={rem(52)}
+              px={20}
+              sx={(theme) => ({
+                "&:hover": {
+                  color: theme.colors.onyx[1],
+                },
+              })}
+              leftIcon={
+                <div className="flex justify-between items-center p-2 bg-white rounded-full">
+                  <FontAwesomeIcon
+                    icon={faPlayCircle}
+                    color="#FFC130"
+                    className="text-[24px]"
+                  />
+                </div>
+              }
+            >
+              More Information
+            </Button>
           </Group>
+        </Grid.Col>
+        <Grid.Col md={6} className="relative flex justify-center items-center">
+          <Image src={back.src} maw={600} className="absolute right-0 z-[5]" />
+          <Image src={center.src} maw={400} className="shrink z-[7]" />
+          <Image
+            src={leftTop.src}
+            maw={200}
+            className="absolute top-0 left-0 z-[6]"
+          />
+          <Image
+            src={leftBottom.src}
+            maw={200}
+            className="absolute bottom-0 left-0 z-[6]"
+          />
+          <Image
+            src={arrow.src}
+            maw={200}
+            className="absolute bottom-1/3 -left-10 z-[4]"
+          />
         </Grid.Col>
       </Grid>
     </Container>
