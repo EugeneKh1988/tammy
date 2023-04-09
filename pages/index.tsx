@@ -3,6 +3,7 @@ import { Button } from '@mantine/core';
 import Header from '@/components/Header';
 import Layout from '@/components/Layout';
 import Hero from '@/components/Hero';
+import HowWorks from '@/components/HowWorks';
 
 
 const Home: NextPage = () => {
@@ -11,8 +12,9 @@ const Home: NextPage = () => {
     <Layout title='Home' description='Home page'>
       <div className="bg-[#FFFBF3]">
         <Header />
-        <Hero></Hero>
+        <Hero />
       </div>
+      <HowWorks />
     </Layout>
   );
 };
