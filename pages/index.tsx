@@ -4,6 +4,7 @@ import Header from '@/components/Header';
 import Layout from '@/components/Layout';
 import Hero from '@/components/Hero';
 import HowWorks from '@/components/HowWorks';
+import Dishes from '@/components/Dishes';
 
 
 const Home: NextPage = () => {
@@ -15,6 +16,7 @@ const Home: NextPage = () => {
         <Hero />
       </div>
       <HowWorks />
+      <Dishes />
     </Layout>
   );
 };
