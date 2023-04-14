@@ -1,18 +1,27 @@
 import { IDish } from "@/libs/mockdishes";
-import { Container, Title, Text, rem, Grid } from "@mantine/core";
-import React, { useState } from "react";
+import { Container, Title, Text, rem, Grid, Pagination } from "@mantine/core";
+import React, { useEffect, useMemo, useState } from "react";
 import useSWR from "swr";
 import Dish from "./Dish";
+import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
+import { faArrowLeft, faArrowRight } from "@fortawesome/free-solid-svg-icons";
 
 
 const Dishes: React.FC = () => {
   const [page, setPage] = useState(1);
+  const [exDishes, setDishes] = useState<IDish[]>([]);
   const fetcher = (args: string) => fetch(args).then((res) => res.json());
   const { data, error, isLoading } = useSWR(
     `/api/dishes?page=${page}`,
     fetcher
   );
-  const exDishes: IDish[] = data && data.dishes ? data.dishes : [];
+  
+
+  useEffect(() => {
+    if (data && !isLoading && data.dishes) {
+      setDishes(data.dishes);
+    } 
+  }, [data, isLoading]);
 
   return (
     <Container size={1440} mt={44} className="xl:px-[100px]">
@@ -46,6 +55,32 @@ const Dishes: React.FC = () => {
           </Grid.Col>
         ))}
       </Grid>
+      <Pagination
+        total={5}
+        value={page}
+        onChange={setPage}
+        my={89}
+        position="center"
+        previousIcon={() => (
+          <FontAwesomeIcon icon={faArrowLeft} color="#FEB918" />
+        )}
+        nextIcon={() => <FontAwesomeIcon icon={faArrowRight} color="#FEB918" />}
+        styles={(theme) => ({
+          control: {
+            borderRadius: "50%",
+            width: `${rem(40)}`,
+            height: `${rem(40)}`,
+            color: theme.colors.darkprince[0],
+            "&[data-active]": {
+              backgroundColor: "#FEB918",
+              color: "#fff",
+              "&:hover": {
+                backgroundColor: "#FEB950 !important",
+              },
+            },
+          },
+        })}
+      />
     </Container>
   );
 };
