@@ -5,6 +5,7 @@ import Hero from '@/components/Hero';
 import HowWorks from '@/components/HowWorks';
 import Dishes from '@/components/Dishes';
 import Order from '@/components/Order';
+import DownloadApp from '@/components/DownloadApp';
 
 
 const Home: NextPage = () => {
@@ -20,6 +21,7 @@ const Home: NextPage = () => {
       <div className="bg-[#FFFBF3]">
         <Order />
       </div>
+      <DownloadApp />
     </Layout>
   );
 };
