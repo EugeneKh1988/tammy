@@ -6,6 +6,8 @@ import HowWorks from '@/components/HowWorks';
 import Dishes from '@/components/Dishes';
 import Order from '@/components/Order';
 import DownloadApp from '@/components/DownloadApp';
+import Contacts from '@/components/Contacts';
+import Footer from '@/components/Footer';
 
 
 const Home: NextPage = () => {
@@ -22,6 +24,10 @@ const Home: NextPage = () => {
         <Order />
       </div>
       <DownloadApp />
+      <Contacts />
+      <div className="bg-[#232233]">
+        <Footer />
+      </div>
     </Layout>
   );
 };
