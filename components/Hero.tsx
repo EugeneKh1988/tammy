@@ -46,8 +46,8 @@ const Hero: React.FC = () => {
           </Title>
           <Text c="darkprince.0" fz={16} lh={rem(32)} maw={500} mt={10}>
             Lorem Ipsum is simply dummy text of the printing and typesetting
-            industry. Lorem Ipsum has been the industry's standard dummy text
-            ever since the 1500s.
+            industry. Lorem Ipsum has been the industry&apos;s standard dummy
+            text ever since the 1500s.
           </Text>
           <Group spacing={10} mt={60}>
             <Button

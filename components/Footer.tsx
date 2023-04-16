@@ -18,8 +18,8 @@ const Footer: React.FC = () => {
           </Text>
           <Text mt={16} fz={14} lh={rem(25)} color="white" maw={331}>
             Lorem Ipsum is simply dummy text of the printing and typesetting
-            industry. Lorem Ipsum has been the industry's standard dummy text
-            ever since the 1500s.
+            industry. Lorem Ipsum has been the industry&apos;s standard dummy
+            text ever since the 1500s.
           </Text>
           <Group mt={15} spacing={20} className="divider-x">
             <Anchor href="https://www.facebook.com">
