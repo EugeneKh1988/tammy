@@ -1,14 +1,14 @@
-import { faTelegram, faTelegramPlane } from "@fortawesome/free-brands-svg-icons";
+import { faFacebook, faFacebookF, faInstagram, faTelegram, faTelegramPlane, faTwitter, faYoutube } from "@fortawesome/free-brands-svg-icons";
 import { faCopyright } from "@fortawesome/free-regular-svg-icons";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
-import { Container, Grid, Text, rem, Title, Box, TextInput, ActionIcon } from "@mantine/core";
+import { Container, Grid, Text, rem, Title, Box, TextInput, ActionIcon, Group, Anchor, Divider } from "@mantine/core";
 import React from "react";
 
 
 const Footer: React.FC = () => {
   return (
     <Container size={1440} className="xl:px-[100px] pt-[243px] ">
-      <Grid sx={{ borderBottom: `${rem(1)} solid #fff` }}>
+      <Grid sx={{ borderBottom: `${rem(1)} solid #fff` }} pb={10}>
         <Grid.Col md={4}>
           <Text color="white" fz={25} fw={700} lh={rem(31)}>
             Tammy
@@ -21,6 +21,39 @@ const Footer: React.FC = () => {
             industry. Lorem Ipsum has been the industry's standard dummy text
             ever since the 1500s.
           </Text>
+          <Group mt={15} spacing={20} className="divider-x">
+            <Anchor href="https://www.facebook.com">
+              <FontAwesomeIcon
+                icon={faFacebookF}
+                color="#fff"
+                className="hover:text-[#FEB918] w-[24px]"
+              />
+            </Anchor>
+            <Divider orientation="vertical" />
+            <Anchor href="https://www.instagram.com">
+              <FontAwesomeIcon
+                icon={faInstagram}
+                color="#fff"
+                className="hover:text-[#FEB918] w-[24px]"
+              />
+            </Anchor>
+            <Divider orientation="vertical" />
+            <Anchor href="https://www.twitter.com">
+              <FontAwesomeIcon
+                icon={faTwitter}
+                color="#fff"
+                className="hover:text-[#FEB918] w-[24px]"
+              />
+            </Anchor>
+            <Divider orientation="vertical" />
+            <Anchor href="https://www.youtube.com">
+              <FontAwesomeIcon
+                icon={faYoutube}
+                color="#fff"
+                className="hover:text-[#FEB918] w-[24px]"
+              />
+            </Anchor>
+          </Group>
         </Grid.Col>
         <Grid.Col md={4}>
           <Title
