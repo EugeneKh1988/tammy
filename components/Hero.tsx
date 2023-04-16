@@ -5,7 +5,7 @@ import React from "react";
 
 // images
 import back from "@/public/background.png";
-import center from "@/public/center.png";
+import center from "@/public/Center.png";
 import leftBottom from "@/public/leftBottom.svg";
 import leftTop from "@/public/leftTop.svg";
 import arrow from "@/public/arrow.svg";
