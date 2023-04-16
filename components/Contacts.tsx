@@ -10,11 +10,11 @@ const Contacts: React.FC = () => {
       <div className="w-max-[1170] mx-auto shadow-xl rounded-[30px] bg-white">
         <div className="md:flex px-4 lg:px-[98px] py-[65px] items-center justify-between gap-x-2">
           <div className="flex items-center">
-            <div className="w-[100px] h-[100px] bg-[#FEB918] rounded-full flex justify-center items-center">
+            <div className="w-[50px] sm:w-[100px] h-[50px] sm:h-[100px] bg-[#FEB918] rounded-full flex justify-center items-center">
               <FontAwesomeIcon
                 icon={faEnvelope}
                 color="#fff"
-                className="h-[40px]"
+                className="h-[20px] sm:h-[40px]"
               />
             </div>
             <Text ml={18} fz={28} lh={rem(37.5)} fw={600}>
@@ -22,11 +22,11 @@ const Contacts: React.FC = () => {
             </Text>
           </div>
           <div className="flex items-center mt-4 md:mt-0">
-            <div className="w-[100px] h-[100px] bg-[#FEB918] rounded-full flex justify-center items-center">
+            <div className="w-[50px] sm:w-[100px] h-[50px] sm:h-[100px] bg-[#FEB918] rounded-full flex justify-center items-center">
               <FontAwesomeIcon
                 icon={faPhone}
                 color="#fff"
-                className="h-[40px]"
+                className="h-[20px] sm:h-[40px]"
               />
             </div>
             <Text ml={18} fz={28} lh={rem(37.5)} fw={600}>
